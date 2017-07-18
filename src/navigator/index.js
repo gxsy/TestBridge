@@ -14,7 +14,13 @@ import * as screens from '../screens';
 const AppNavigator = StackNavigator(
   {
     Index: {
+      screen: screens.Home
+    },
+    ImagePicker: {
       screen: screens.ImagePicker
+    },
+    ButtonInput: {
+      screen: screens.ButtonInput
     }
   },
   {
