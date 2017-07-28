@@ -21,7 +21,10 @@ const AppNavigator = StackNavigator(
     },
     ButtonInput: {
       screen: screens.ButtonInput
-    }
+    },
+    RefreshControlExpand: {
+      screen: screens.RefreshControlExpand
+    },
   },
   {
     initialRouteName: 'Index',
