@@ -25,6 +25,9 @@ const AppNavigator = StackNavigator(
     RefreshControlExpand: {
       screen: screens.RefreshControlExpand
     },
+    PayPage: {
+      screen: screens.PayPage
+    }
   },
   {
     initialRouteName: 'Index',

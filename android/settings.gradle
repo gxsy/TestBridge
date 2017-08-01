@@ -1,5 +1,5 @@
 rootProject.name = 'TestBridge'
-include ':react-native-refresh-control-wd'
+include ':react-native-refresh-control-wd', ':feifanpay'
 project(':react-native-refresh-control-wd').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-refresh-control-wd/android')
 
 include ':app'
