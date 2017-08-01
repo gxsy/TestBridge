@@ -14,6 +14,10 @@ class Home extends React.Component {
     return (
       <ScrollView>
         <Button
+          title="Pay Page"
+          onPress={() => this.onNavigate('PayPage')}
+        />
+        <Button
           title="Image Picker"
           onPress={() => this.onNavigate('ImagePicker')}
         />
