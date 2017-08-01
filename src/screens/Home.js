@@ -18,6 +18,10 @@ class Home extends React.Component {
           onPress={() => this.onNavigate('ImagePicker')}
         />
         <Button
+          title="RefreshControlExpand"
+          onPress={() => this.onNavigate('RefreshControlExpand')}
+        />
+        <Button
           title="Input With Button"
           onPress={() => this.onNavigate('ButtonInput')}
         />
