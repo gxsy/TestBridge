@@ -5,7 +5,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.feifan.o2o.pay.permission.FFPAY_ENTRY" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="22" />
@@ -27,6 +32,18 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <!-- PayResultActivity 可用实现IKuaiqianEventHandler的Activity替换  -->
+        <activity android:name="com.geezer.feifanpay.PayResultActivity">
+        </activity>
+
+        <!-- KqH5PayActivity 全路径名称不可变 -->
+
+        <activity
+            android:name="com.feifan.pay.libsdk.sdk.FfanH5PayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>
