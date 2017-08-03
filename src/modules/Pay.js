@@ -1,6 +1,20 @@
-import { NativeModules } from "react-native";
-import { DeviceEventEmitter } from "react-native";
-const { RTCFFPay } = NativeModules;
+import React, { Component } from "react";
+import {
+  DeviceEventEmitter,
+  NativeEventEmitter,
+  Platform,
+  NativeModules,
+  Alert
+} from "react-native";
+const { FFPay } = NativeModules;
+
+if (FFPay) {
+	Alert.alert("test", "cc")
+}else {
+		Alert.alert("test", "not")
+}
+const RCTFFPayEvent = new NativeEventEmitter(FFPay);
+const subscription = null;
 
 /**
  *
@@ -13,7 +27,7 @@ const { RTCFFPay } = NativeModules;
  * @returns {void}
  */
 export function pay(data) {
-  RTCFFPay.pay(data);
+  FFPay.pay(data);
 }
 
 /**
@@ -74,7 +88,11 @@ export function pay(data) {
  *
  */
 export function addFFPayResponseListener(listener) {
-  DeviceEventEmitter.addListener("FFPayResponse", listener);
+  if (Platform.OS == "android") {
+    DeviceEventEmitter.addListener("FFPayResponse", listener);
+  } else {
+    subscription = RCTFFPayEvent.addListener("FFPayResponse", listener);
+  }
 }
 
 /**
@@ -83,23 +101,27 @@ export function addFFPayResponseListener(listener) {
  * remove listener
  */
 export function removeFFPayResponseListener() {
-  DeviceEventEmitter.removeListener("FFPayResponse");
+  if (Platform.OS == "android") {
+    DeviceEventEmitter.removeListener("FFPayResponse");
+  } else {
+    subscription.remove();
+  }
 }
 
 /**
  * Payment result status code: success('100')
  */
-export const RESULT_PAY_OK = RTCFFPay.RESULT_PAY_OK;
+export const RESULT_PAY_OK = FFPay.RESULT_PAY_OK;
 
 /**
  * Payment result status code: cancelled('200')
  */
 export const RESULT_ERROR_CODE_USER_CANCEL =
-  RTCFFPay.RESULT_ERROR_CODE_USER_CANCEL;
+  FFPay.RESULT_ERROR_CODE_USER_CANCEL;
 
 /**
  * Payment result status code: Payment error, see “resultMessage” for specific reasons('300')
  */
-export const RESULT_ERROR_CODE_PAY = RTCFFPay.RESULT_ERROR_CODE_PAY;
+export const RESULT_ERROR_CODE_PAY = FFPay.RESULT_ERROR_CODE_PAY;
 
-export default RTCFFPay;
+export default FFPay;

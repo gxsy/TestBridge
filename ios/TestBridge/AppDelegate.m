@@ -12,7 +12,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <FFanPaySDK/FFanPaySDK.h>
-//#import "RCTFFanPay.h"
 
 @implementation AppDelegate
 
@@ -42,12 +41,12 @@
        if(url.scheme&& [url.scheme isEqualToString:@"ffpaydemo"]){
          [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
            //商户app根据返回的FFanPayResult，来跟新商户订单状态
-           NSString *string = paymentResult.resultMessage;
+           //NSString *string = paymentResult.resultStatus;
            
-           [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:string];
-           UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"原生提示"message:string preferredStyle:UIAlertControllerStyleAlert];
-           [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
-           [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+           [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:paymentResult];
+//           UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"原生提示"message:string preferredStyle:UIAlertControllerStyleAlert];
+//           [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+//           [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
            
          }];
        }
