@@ -11,11 +11,13 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <FFanPaySDK/FFanPaySDK.h>
+//#import "RCTFFanPay.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
@@ -33,5 +35,24 @@
   [self.window makeKeyAndVisible];
   return YES;
 }
+
+
+- (BOOL)application:(UIApplication*)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+  
+       if(url.scheme&& [url.scheme isEqualToString:@"ffpaydemo"]){
+         [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
+           //商户app根据返回的FFanPayResult，来跟新商户订单状态
+           NSString *string = paymentResult.resultMessage;
+           
+           [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:string];
+           UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"原生提示"message:string preferredStyle:UIAlertControllerStyleAlert];
+           [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+           [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+           
+         }];
+       }
+      return YES;
+}
+
 
 @end
