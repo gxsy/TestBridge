@@ -117,13 +117,6 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "TestBridge-tvOS";
 		};
-		3B6A80A71F3804F5009F6F8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B6A80621F37FC7E009F6F8A;
-			remoteInfo = WHAddressPicker;
-		};
 		3B892E641F31BE4C00D32B03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B892E601F31BE4B00D32B03 /* RCTFFanPay.xcodeproj */;
@@ -310,7 +303,6 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* TestBridge-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestBridge-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TestBridge-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestBridge-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WHAddressPicker.xcodeproj; path = "../node_modules/react-native-WHAddressPicker/ios/WHAddressPicker.xcodeproj"; sourceTree = "<group>"; };
 		3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFanPaySDK.framework; sourceTree = "<group>"; };
 		3B892E601F31BE4B00D32B03 /* RCTFFanPay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFFanPay.xcodeproj; path = "../node_modules/react-native-FFPayModule/ios/RCTFFanPay.xcodeproj"; sourceTree = "<group>"; };
 		3B892E971F31D21900D32B03 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -491,14 +483,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B6A80A41F3804F4009F6F8A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B6A80A81F3804F5009F6F8A /* libWHAddressPicker.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3B892E611F31BE4B00D32B03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,7 +529,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */,
 				3B892E601F31BE4B00D32B03 /* RCTFFanPay.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -764,10 +747,6 @@
 					ProductGroup = 557CAACD1F1DFDB7003E48C5 /* Products */;
 					ProjectRef = F5358401376E4EF4894FC740 /* RNKeyboardButtons.xcodeproj */;
 				},
-				{
-					ProductGroup = 3B6A80A41F3804F4009F6F8A /* Products */;
-					ProjectRef = 3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -834,13 +813,6 @@
 			fileType = archive.ar;
 			path = libReact.a;
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B6A80A81F3804F5009F6F8A /* libWHAddressPicker.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libWHAddressPicker.a;
-			remoteRef = 3B6A80A71F3804F5009F6F8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3B892E651F31BE4C00D32B03 /* libRCTFFanPay.a */ = {
