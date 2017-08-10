@@ -34,13 +34,13 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* TestBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TestBridgeTests.m */; };
+		3B6A80C01F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */; };
+		3B6A80C11F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */; };
+		3B6A80C21F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */; };
+		3B6A80C31F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */; };
 		3B892E661F31BE8000D32B03 /* libRCTFFanPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B892E651F31BE4C00D32B03 /* libRCTFFanPay.a */; };
 		3B892E981F31D21900D32B03 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B892E971F31D21900D32B03 /* SystemConfiguration.framework */; };
 		3B892E9A1F31D22800D32B03 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B892E991F31D22800D32B03 /* CoreTelephony.framework */; };
-		3BF3862C1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */; };
-		3BF3862D1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */; };
-		3BF3862E1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */; };
-		3BF3862F1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8675AA8713DA493CA1B0A464 /* libRNKeyboardButtons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CD3CBBFFAE43D0B0AB1772 /* libRNKeyboardButtons.a */; };
@@ -116,6 +116,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "TestBridge-tvOS";
+		};
+		3B6A80A71F3804F5009F6F8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B6A80621F37FC7E009F6F8A;
+			remoteInfo = WHAddressPicker;
 		};
 		3B892E641F31BE4C00D32B03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -303,10 +310,11 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* TestBridge-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestBridge-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TestBridge-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestBridge-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WHAddressPicker.xcodeproj; path = "../node_modules/react-native-WHAddressPicker/ios/WHAddressPicker.xcodeproj"; sourceTree = "<group>"; };
+		3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFanPaySDK.framework; sourceTree = "<group>"; };
 		3B892E601F31BE4B00D32B03 /* RCTFFanPay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFFanPay.xcodeproj; path = "../node_modules/react-native-FFPayModule/ios/RCTFFanPay.xcodeproj"; sourceTree = "<group>"; };
 		3B892E971F31D21900D32B03 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3B892E991F31D22800D32B03 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFanPaySDK.framework; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -319,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				3BF3862D1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */,
+				3B6A80C11F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +342,7 @@
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
-				3BF3862C1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */,
+				3B6A80C01F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -357,7 +365,7 @@
 				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
-				3BF3862E1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */,
+				3B6A80C21F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +374,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF3862F1F32AA8600A0B44F /* FFanPaySDK.framework in Frameworks */,
+				3B6A80C31F3AFF8C009F6F8A /* FFanPaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +491,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B6A80A41F3804F4009F6F8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A80A81F3804F5009F6F8A /* libWHAddressPicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3B892E611F31BE4B00D32B03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +545,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */,
 				3B892E601F31BE4B00D32B03 /* RCTFFanPay.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -558,7 +575,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				3BF3862B1F32AA8600A0B44F /* FFanPaySDK.framework */,
+				3B6A80BF1F3AFF8C009F6F8A /* FFanPaySDK.framework */,
 				13B07FAE1A68108700A75B9A /* TestBridge */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* TestBridgeTests */,
@@ -747,6 +764,10 @@
 					ProductGroup = 557CAACD1F1DFDB7003E48C5 /* Products */;
 					ProjectRef = F5358401376E4EF4894FC740 /* RNKeyboardButtons.xcodeproj */;
 				},
+				{
+					ProductGroup = 3B6A80A41F3804F4009F6F8A /* Products */;
+					ProjectRef = 3B6A80A31F3804F4009F6F8A /* WHAddressPicker.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -813,6 +834,13 @@
 			fileType = archive.ar;
 			path = libReact.a;
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6A80A81F3804F5009F6F8A /* libWHAddressPicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWHAddressPicker.a;
+			remoteRef = 3B6A80A71F3804F5009F6F8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3B892E651F31BE4C00D32B03 /* libRCTFFanPay.a */ = {

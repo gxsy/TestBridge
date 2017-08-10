@@ -26,10 +26,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.testbridge.feifanpay</string>
+			<string>500</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>ffpaydemo</string>
+				<string>ffpay500</string>
 			</array>
 		</dict>
 	</array>
@@ -56,7 +56,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>若不允许，将有很多功能无法正常使用</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

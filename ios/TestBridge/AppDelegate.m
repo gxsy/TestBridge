@@ -35,23 +35,29 @@
   return YES;
 }
 
-
+// iOS 9.0 later
 - (BOOL)application:(UIApplication*)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
   
-       if(url.scheme&& [url.scheme isEqualToString:@"ffpaydemo"]){
+       if(url.scheme&& [url.scheme isEqualToString:@"ffpay500"]){
          [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
            //商户app根据返回的FFanPayResult，来跟新商户订单状态
-           //NSString *string = paymentResult.resultStatus;
-           
            [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:paymentResult];
-//           UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"原生提示"message:string preferredStyle:UIAlertControllerStyleAlert];
-//           [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
-//           [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
-           
          }];
        }
       return YES;
 }
 
+
+// iOS 9.0 before
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation {
+  
+  if(url.scheme&& [url.scheme isEqualToString:@"ffpay500"]){
+    [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
+      //商户app根据返回的FFanPayResult，来跟新商户订单状态
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:paymentResult];
+    }];
+  }
+  return YES;
+}
 
 @end

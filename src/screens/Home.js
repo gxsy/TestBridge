@@ -29,6 +29,10 @@ class Home extends React.Component {
           title="Input With Button"
           onPress={() => this.onNavigate('ButtonInput')}
         />
+        {/* <Button
+          title="Address Picker"
+          onPress={() => this.onNavigate('ChooseAddr')}
+        /> */}
       </ScrollView>
     );
   }
