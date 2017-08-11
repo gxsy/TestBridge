@@ -2,8 +2,8 @@
 
 #### 配置、代码及使用
 
-1. 工程配置：（此模块未发布npm，以下为手动配置）
-
+1. 工程配置：（此模块未发布npm，以下为手动安装、配置）
+- 注：自动安装可在packag.json 中添加依赖 ``` "FFPay": "git+http://10.199.192.11/WangHao-iOS/RNFFpayBridge.git" ```；s
 - 获取飞凡通支付RN桥接模块：<http://10.199.192.11/business-platform/RNFFpayBridge.git> (最新代码可能在dve分支)，将整个模块放入/[your project]/node modules 目录下；
 - 用Xcode打开你的ReactNative项目中的ios目录下的project,在飞凡通支付RN桥接模块，找到RCTFFanPay.xcodeproj，拖入Xcode的“Libraries”目录中；
 - 将模块中的FFanPaySDK.framework导入一份到Xcode 项目(your project根目录下一级即可)，选择“copy if necessary”；
