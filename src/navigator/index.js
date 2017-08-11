@@ -27,7 +27,10 @@ const AppNavigator = StackNavigator(
     },
     PayPage: {
       screen: screens.PayPage
-    }
+    },
+    // ChooseAddr: {
+    //   screen: screens.ChooseAddr
+    // }
   },
   {
     initialRouteName: 'Index',

@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, Button, TextInput, StyleSheet } from "react-native";
-import {
-  pay,
-  addFFPayResponseListener,
-  removeFFPayResponseListener,
-  RESULT_PAY_OK,
-  RESULT_ERROR_CODE_USER_CANCEL,
-  RESULT_ERROR_CODE_PAY
-} from "../modules/Pay";
+import Pay from "../modules/Pay";
 
 const styles = StyleSheet.create({
   input: {
@@ -40,21 +33,22 @@ class PayPage extends Component {
   }
 
   componentWillMount() {
-    addFFPayResponseListener(event => {
+    Pay.onPayResponseListener(event => {
+      console.log(event);
       switch (event.code) {
-        case RESULT_PAY_OK:
+        case Pay.RESULT_PAY_OK:
         // pay success
           this.setState({
             message: event.message,
           });
           break;
-        case RESULT_ERROR_CODE_USER_CANCEL:
+        case Pay.RESULT_ERROR_CODE_USER_CANCEL:
         // pay cancelled
           this.setState({
             message: event.message,
           });
           break;
-        case RESULT_ERROR_CODE_PAY:
+        case Pay.RESULT_ERROR_CODE_PAY:
         // pay error see "message"
           this.setState({
             message: event.message,
@@ -65,7 +59,7 @@ class PayPage extends Component {
   }
 
   componentWillUnmount() {
-    removeFFPayResponseListener();
+    // Pay.removeOnPayResponseListener();
   }
 
   renderInput(name, value, change) {
@@ -106,7 +100,7 @@ class PayPage extends Component {
             billOrderNo: text
           })
         )}
-        <Button title={"pay"} onPress={() => pay(this.state)} />
+        <Button title={"pay"} onPress={() => Pay.pay(this.state)} />
         <Text>
           {this.state.message}
         </Text>

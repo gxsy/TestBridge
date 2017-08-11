@@ -11,11 +11,12 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <FFanPaySDK/FFanPaySDK.h>
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
@@ -31,6 +32,31 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  return YES;
+}
+
+// iOS 9.0 later
+- (BOOL)application:(UIApplication*)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+  
+       if(url.scheme&& [url.scheme isEqualToString:@"ffpay500"]){
+         [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
+           //商户app根据返回的FFanPayResult，来跟新商户订单状态
+           [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:paymentResult];
+         }];
+       }
+      return YES;
+}
+
+
+// iOS 9.0 before
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation {
+  
+  if(url.scheme&& [url.scheme isEqualToString:@"ffpay500"]){
+    [FFanPaySDK handleOpenURL:url callback:^(FFanPayResult *paymentResult) {
+      //商户app根据返回的FFanPayResult，来跟新商户订单状态
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"RCTFFanPayNotification" object:paymentResult];
+    }];
+  }
   return YES;
 }
 
