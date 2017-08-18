@@ -11,6 +11,20 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+
+/**
+#ifdef DEBUG
+#import <UIKit/UIKit.h>
+#else
+#import <Cocoa/Cocoa.h>
+#endif
+*/
+
+/**
+注意：此支付SDK为sandbox测试环境（支持真机和模拟器），App上架发布时需在主工程及Libraries子工程RCTFFanPay中替换成生产环境版SDK
+  （本工程：“飞凡SDK相关文件 （x86_64/ARM）”目录FFanPaySDK.framework）
+*/
+
 #import <FFanPaySDK/FFanPaySDK.h>
 
 @implementation AppDelegate
